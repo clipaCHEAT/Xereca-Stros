@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xereca Stors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- العنوان الرئيسي -->
+    <header>
+        <h1>Xereca Stors</h1>
+    </header>
+
+    <!-- المنتجات -->
+    <div class="products-container">
+        <!-- المنتج 1 -->
+        <div class="product">
+            <img src="https://i.postimg.cc/8z5vJrDv/48-OEi-NNd-BG7d-Qr-XLQ4ss-QU-Mmuschrh-PAea-GE-Tl8-F8-350x200-1x-0.jpg" alt="Netflix">
+            <h2>Nitro 1 month + visa </h2>
+            <p>5 DT / 1$</p>
+            <button class="buy-btn" onclick="openPaymentModal()">شراء</button>
+        </div>
+
+        <!-- المنتج 2 -->
+        <div class="product">
+            <img src="https://i.postimg.cc/8z5vJrDv/48-OEi-NNd-BG7d-Qr-XLQ4ss-QU-Mmuschrh-PAea-GE-Tl8-F8-350x200-1x-0.jpg" alt="Netflix">
+            <h2>Nitro 3 month + visa </h2>
+            <p>10 DT / 2$</p>
+            <button class="buy-btn" onclick="openPaymentModal()">شراء</button>
+        </div>
+
+        <!-- المنتج 3 -->
+        <div class="product">
+            <img src="https://i.postimg.cc/XJ375TFP/channels4-profile-1.jpg" alt="Netflix">
+            <h2>Acounte Rokstar Gta Ful Acc</h2>
+            <p>30 DT / 10$</p>
+            <button class="buy-btn" onclick="openPaymentModal()">شراء</button>
+        </div>
+
+        <!-- المنتجات الجديدة -->
+        <!-- المنتج 4 -->
+        <div class="product">
+            <img src="https://i.postimg.cc/59gjBNsS/92gs8zn0mjz91.jpg" alt="Spotify">
+            <h2>Devloper Server Dicord</h2>
+            <p>15 DT / 5$</p>
+            <button class="buy-btn" onclick="openPaymentModal()">شراء</button>
+        </div>
+
+        <!-- المنتج 5 -->
+        <div class="product">
+            <img src="https://i.postimg.cc/WzvWTwBg/images-1.png" alt="Spotify">
+            <h2>View Tik Tok</h2>
+            <p>50 DT / 18.99$</p>
+            <button class="buy-btn" onclick="openPaymentModal()">شراء</button>
+        </div>
+
+        <!-- المنتج 6 -->
+        <div class="product">
+            <img src="https://i.postimg.cc/2SDZGX44/znlX7YC.png" alt="Disney+">
+            <h2>Project Bots index.js</h2>
+            <p>2 DT / 0.99$</p>
+            <button class="buy-btn" onclick="openPaymentModal()">شراء</button>
+        </div>
+
+        <!-- المنتج 7 -->
+        <div class="product">
+            <img src="https://i.postimg.cc/BvhPqSRg/payment-visa-icon-2048x1261-bxxvrf9b.png" alt="Disney+">
+            <h2>Visa limet Active 4 Only Dicord</h2>
+            <p>15 DT / 5$</p>
+            <button class="buy-btn" onclick="openPaymentModal()">شراء</button>
+        </div>
+
+    <!-- اللوحة المنبثقة لاختيار طريقة الدفع -->
+    <div class="payment-modal" id="paymentModal">
+        <div class="modal-content">
+            <h3>اختر طريقة الدفع</h3>
+            <div class="payment-options">
+                <!-- زر Ooredoo -->
+                <button onclick="redirectToPayment('https://discord.gg/nGDEEDbE')">
+                    <img src="https://i.postimg.cc/RVqCw16v/t-ooredoo.jpg" alt="Ooredoo">
+                    دفع عبر Ooredoo
+                </button>
+                <!-- زر PayPal -->
+                <button onclick="redirectToPayment('https://discord.gg/nGDEEDbE')">
+                    <img src="https://i.postimg.cc/ZKgbH9pp/images.png" alt="PayPal">
+                    دفع عبر PayPal
+                </button>
+            </div>
+            <button class="close-btn" onclick="closePaymentModal()">إغلاق</button>
+        </div>
+    </div>
+
+    <!-- سكربت JavaScript -->
+    <script>
+        // فتح اللوحة المنبثقة
+        function openPaymentModal() {
+            document.getElementById('paymentModal').style.display = 'flex';
+        }
+
+        // إغلاق اللوحة المنبثقة
+        function closePaymentModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+
+        // التوجيه إلى رابط الدفع
+        function redirectToPayment(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
